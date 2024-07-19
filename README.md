@@ -14,7 +14,7 @@
 
 - **Programming Languages**: Python, JavaScript
 - **Frameworks**: TensorFlow/Keras, PyTorch, React.js, Flask/Django
-- **APIs**: OpenAQ, OpenWeatherMap, World Air Quality Index
+- **APIs**: [OpenAQ](https://docs.openaq.org/docs/getting-started), [OpenWeatherMap](https://openweathermap.org/api), [World Air Quality Index](https://aqicn.org/api/)
 - **Databases**: PostgreSQL, MongoDB
 - **Visualization Libraries**: D3.js, Matplotlib, Plotly
 - **Tools**: Git, Docker, Jupyter Notebooks
