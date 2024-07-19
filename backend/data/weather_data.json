@@ -1,0 +1,92 @@
+[
+    {
+        "coord": {
+            "lon": -117.8265,
+            "lat": 33.6846
+        },
+        "weather": [
+            {
+                "id": 804,
+                "main": "Clouds",
+                "description": "overcast clouds",
+                "icon": "04n"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": 19.26,
+            "feels_like": 19.59,
+            "temp_min": 17.72,
+            "temp_max": 21.09,
+            "pressure": 1014,
+            "humidity": 90,
+            "sea_level": 1014,
+            "grnd_level": 1004
+        },
+        "visibility": 10000,
+        "wind": {
+            "speed": 1.54,
+            "deg": 240
+        },
+        "clouds": {
+            "all": 100
+        },
+        "dt": 1721383167,
+        "sys": {
+            "type": 1,
+            "id": 5876,
+            "country": "US",
+            "sunrise": 1721393680,
+            "sunset": 1721444414
+        },
+        "timezone": -25200,
+        "id": 5359777,
+        "name": "Irvine",
+        "cod": 200
+    },
+    {
+        "coord": {
+            "lon": -117.8265,
+            "lat": 33.6846
+        },
+        "weather": [
+            {
+                "id": 804,
+                "main": "Clouds",
+                "description": "overcast clouds",
+                "icon": "04n"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": 19.26,
+            "feels_like": 19.59,
+            "temp_min": 17.72,
+            "temp_max": 21.09,
+            "pressure": 1014,
+            "humidity": 90,
+            "sea_level": 1014,
+            "grnd_level": 1004
+        },
+        "visibility": 10000,
+        "wind": {
+            "speed": 1.54,
+            "deg": 240
+        },
+        "clouds": {
+            "all": 100
+        },
+        "dt": 1721383167,
+        "sys": {
+            "type": 1,
+            "id": 5876,
+            "country": "US",
+            "sunrise": 1721393680,
+            "sunset": 1721444414
+        },
+        "timezone": -25200,
+        "id": 5359777,
+        "name": "Irvine",
+        "cod": 200
+    }
+]
