@@ -1,0 +1,7 @@
+Flask
+Flask-Cors
+Requests
+Pandas
+NumPy
+TensorFlow  # or PyTorch, based on your choice
+SQLAlchemy  # If using SQL database

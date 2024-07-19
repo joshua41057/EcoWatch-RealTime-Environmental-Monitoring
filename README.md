@@ -36,7 +36,7 @@
     ```
 2. **Install Python Dependencies**:
     ```bash
-    cd EcoWatch-RealTime-Environmental-Monitoring
+    cd EcoWatch-RealTime-Environmental-Monitoring\backend
     pip install -r requirements.txt
     ```
 3. **Install JavaScript Dependencies**:
