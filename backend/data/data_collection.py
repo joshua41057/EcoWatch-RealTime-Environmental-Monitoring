@@ -2,9 +2,7 @@ import requests
 import pandas as pd
 import json
 import time
-import os
 import threading
-import keyboard
 import signal
 import sys
 
@@ -13,15 +11,15 @@ AIR_QUALITY_API = "https://api.openaq.org/v2/measurements"
 WEATHER_API = 'https://api.openweathermap.org/data/2.5/weather'
 WEATHER_API_KEY = "8caeb1304416a17b8525c38c1da89e6f"
 
-# Coordinates for the location you want to get weather data for
-latitude = 33.6846
-longitude = -117.8265
+# Coordinates for a city in California
+latitude = 34.0522  # Los Angeles latitude
+longitude = -118.2437  # Los Angeles longitude
 
 # Interval to wait between API calls (in seconds)
-interval = 10  # 10 seconds
+interval = 10  # 60 seconds
 
 # Number of times to collect data
-num_collections = 6  # For example, collect data 6 times
+num_collections = 10  # For example, collect data 60 times
 
 # File to store the weather data
 output_file = 'weather_data.json'
@@ -33,7 +31,9 @@ weather_data = []
 stop_flag = threading.Event()
 
 
-def fetch_air_quality(lat, lon, radius=10000, limit=100, date_from="2024-01-01T00:00:00Z", date_to="2024-07-19T23:59:59Z"):
+def fetch_air_quality(lat, lon, radius=10000, limit=100,
+                      date_from="2024-01-01T00:00:00Z",
+                      date_to="2024-07-19T23:59:59Z"):
     headers = {
         'accept': 'application/json'
     }
@@ -52,7 +52,7 @@ def fetch_air_quality(lat, lon, radius=10000, limit=100, date_from="2024-01-01T0
 
         if 'results' in data and data['results']:
             df = pd.DataFrame(data['results'])
-            df.to_csv('air_quality.csv', index=False)
+            df.to_csv('../data/air_quality.csv', index=False)  # Adjusted path
             print("Air quality data saved.")
         else:
             print("No air quality data found or 'results' key is missing.")
@@ -87,7 +87,7 @@ def get_weather_data(lat, lon, units='metric'):
         return {}
 
 
-def collect_weather_data(num_collections=6, interval=600):
+def collect_weather_data(num_collections=10, interval=10):
     global weather_data
     for i in range(num_collections):
         if stop_flag.is_set():
